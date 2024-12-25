@@ -1,12 +1,15 @@
-let arr=["a", "b", "c", "d", "d"];
-let newArr=[];
-
-
+let arr = ["a", "b", "d", "d", "e"];
+let newArr = [];
+let random=Math.random();
+ 
 for(let i=0; i<arr.length; i++){
-    if(arr[i]==arr[i++]){
-newArr = arr.map((x) => x + x);
+  if(arr[i+1]!==arr[i]){
+    newArr.push(arr[i]+ arr[i])
+  }
+  else{
+    //newArr.push(arr[i]+arr[i]);
+    newArr.push(arr[i+1]);
+  }
 }
-else{
-    newArr = arr.map((x) => x)}
-}
+//console.log(random);
 console.log(newArr);
